@@ -1,8 +1,9 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+// import java.io.BufferedReader;
+// import java.io.InputStreamReader;
+// import java.io.FileInputStream;
+// import java.io.IOException;
+// import java.io.InputStream;
+import java.util.Scanner;//this scanner class will be used to read from commandline
 
 public class Converter {
     public Converter() {
@@ -27,7 +28,7 @@ public class Converter {
                 // #, $, %, etc.) cannot be used
             }
         }
-        return secretMessage;
+        return this.secretMessage;
     };
 
     public String Decode(String secret) {// function to decode the message
@@ -46,7 +47,7 @@ public class Converter {
                 this.clearMessage += text[index]; // Convert the character to normal characters
             }
         }
-        return clearMessage;
+        return this.clearMessage;
     };
 
     // accessors and mutators
@@ -79,36 +80,47 @@ public class Converter {
             "E", "0", "M", "J", "B", "4", "G", "9", "X", "N", "3", " ", "2", "R", "Y", "K", "S", "F", "A" };
 
     // the main function
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args)
     {
         String message= "";     //Stores the crisis message to be encoded/decoded
         String result = "";     //Stores the result of encoding/decoding
         String encode = "";     //Stores the options asked to the user
-        Converter converter;
-        InputStreamReader isr=new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        InputStream is = null; //new input stream
-        is = new FileInputStream(".");
+        Converter converter = new Converter();
+        // InputStreamReader isr=new InputStreamReader(System.in);
+        // BufferedReader br = new BufferedReader(isr);
+        // InputStream is = null; //new input stream
+        // is = new FileInputStream(".");
 
         System.out.println("Would you like to Encode a Crisis Message (E) or Decode a scrambled Crisis Message (D)?");
-        encode = br.readLine();
+         
+        Scanner scInput = new Scanner(System.in);
+        encode = scInput.nextLine();
+        // scInput.close();
 
         if(encode.compareTo("E") < 0){
             //Encode the inputted crisis message
             System.out.println("Please enter the Crisis Message to encode:");
-            is.skip(1); //Clears the new line character out of input buffer so we can enter a whole line
-            message = br.readLine();
+            // is.skip(1); //Clears the new line character out of input buffer so we can enter a whole line
+            // Scanner scInput = new Scanner(System.in);
+            // message = scInput.nextLine();
+            // scInput.close();
+            // Scanner sInput = new Scanner(System.in);
+            message = scInput.nextLine();
+            // scInput.close();
             //Encode
             result = converter.Encode(message); //Encode the crisis message using the Converter
             System.out.println("Entered Clear-text Crisis Message: ");
-            System.out.println("Encoded Crisis Message: \n" + result +
-                                "_________________________________");
+            System.out.println("Encoded Crisis Message: \n_________________________________" + result +
+                                "\n_________________________________");
         }
         else{
             //Decode a scrambled Crisis message into Clear-Text
             System.out.print( "Please enter Encoded Crisis Message to Decode:");
-            is.skip(1); //Clears the new line character out of input buffer so we can enter a whole line
+            // is.skip(1); //Clears the new line character out of input buffer so we can enter a whole line
             // getline(std::cin, message);
+            // Scanner scInput = new Scanner(System.in);
+            message = scInput.nextLine();
+            scInput.close();
             //Decode
             result = converter.Decode(message); //Decode the Crisis Message using Converter
             System.out.println("Entered Encoded Crisis Message: " + message);
@@ -117,7 +129,7 @@ public class Converter {
                                 + result + '\n' + 
                                 "_________________________________");
         }
-        is.close();
+        // is.close();
 
     }
 }
