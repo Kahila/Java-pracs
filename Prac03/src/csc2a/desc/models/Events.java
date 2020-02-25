@@ -1,8 +1,7 @@
 package csc2a.desc.models;
 
 //IMPORTS
-import java.util.Scanner;
-import java.io.File;
+import csc2a.desc.models.E_EVENT_CATEGORY;
 
 /****
  * 
@@ -15,6 +14,15 @@ public class Events {
 	private E_EVENT_CATEGORY EV_CATEGORY;
 	private int EV_SEVERITY;
 	private boolean EV_RESPONDED;
+	
+	//Parameterized constructor 
+	public Events(String iD, String name, E_EVENT_CATEGORY _category, int _severity, boolean responded) {
+		EV_ID = iD;
+		EV_NAME = name;
+		EV_CATEGORY = _category;
+		EV_SEVERITY = _severity;
+		EV_RESPONDED = responded;
+	}
 	
 	//setters for private vars
 	public void setID(String ID) {
