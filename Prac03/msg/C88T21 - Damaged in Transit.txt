@@ -1,0 +1,4 @@
+C88T21	Northern Dystopian Storm	*Response Team Bravo*
+E45B32	Sandbag Placement	[HUMANITARIAN@8]	true
+E66K41	Flooding	[DISASTER@9]	true
+*11R67	C0mmun1cat10ns out^ge%%	[FAILURE@8]	FALSE FAILURE FAILURE FAILURE

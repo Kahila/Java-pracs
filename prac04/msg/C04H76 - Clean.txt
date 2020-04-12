@@ -1,0 +1,5 @@
+C04H76	Dystopian Fires		*Response Team Alpha*
+E46A34	Displaced Animals	[DISASTER@8]	false
+E87K43	Fire Victims	[HUMANITARIAN@6]	true
+E62R45	Food Shortage	[HUMANITARIAN@4]	false
+E34G21	Fire Ongoing	[DISASTER@10]	true
