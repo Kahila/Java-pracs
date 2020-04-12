@@ -1,6 +1,0 @@
-C56W2	War in Southern Dystopia	*Peacekeeping Team Tango*
-E33A78	Nothing*Happeneinf	[WAR@-5]	false
-E11K43	Civilian Rescue	[&65dgvgv@7]	TURTLES
-E63R23	***	[HUMANITARIAN@4]	false
-stuff	Bomb Disposal	[WARMONGERING@5]	BANANA
-E76J98	Training Exercise	[TRAINING@2]	true
