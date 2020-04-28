@@ -1,0 +1,6 @@
+C56W21	War in Southern Dystopia	*Peacekeeping Team Tango*
+E33A78	Battlefront	[WAR@10]	false	9
+E11K43	Civilian Rescue	[HUMANITARIAN@7]	true	2
+E63R23	Displaced Farmers	[HUMANITARIAN@4]	false	5
+E43G11	Bomb Disposal	[PEACEKEEPING@10]	true	6
+E76J98	Training Exercise	[TRAINING@2]	true	7
